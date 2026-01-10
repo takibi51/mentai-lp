@@ -277,16 +277,12 @@ class Footer {
           <div class="footer-links">
             <h4>SNS</h4>
             <div class="sns-links">
-               <a href="#">X (Twitter)</a>
+               <a href="https://www.instagram.com/mentai_ai_lab/" target="_blank">Instagram</a>
             </div>
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2024 mentailab. All rights reserved.</p>
-          <div class="footer-bottom-links">
-            <a href="#">利用規約</a>
-            <a href="#">プライバシーポリシー</a>
-          </div>
+          <p>&copy; 2026 mentai. All rights reserved.</p>
         </div>
       </div>
     `;

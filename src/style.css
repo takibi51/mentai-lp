@@ -575,6 +575,26 @@ p {
     font-weight: 800;
 }
 
+/* Floating Animation for Text */
+@keyframes floatText {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.floating-text {
+    animation: floatText 3s ease-in-out infinite;
+    display: inline-block;
+}
+
 .faq-answer {
     padding: 0 32px 32px;
     color: var(--muted);
