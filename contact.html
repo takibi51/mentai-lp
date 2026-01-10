@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ | mentai</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body class="bg-gradient-main">
+
+    <div class="page-hero">
+        <div class="container">
+            <h1>お問い合わせ</h1>
+            <p>Contact Us</p>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+
+            <div class="form-container fade-in-up">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label class="form-label">お名前 <span style="color: #EF4444;">*</span></label>
+                        <input type="text" class="form-input" required placeholder="例：山田 太郎">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">会社名（法人の方のみ）</label>
+                        <input type="text" class="form-input" placeholder="例：株式会社mentailab">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">メールアドレス <span style="color: #EF4444;">*</span></label>
+                        <input type="email" class="form-input" required placeholder="example@mentai.me">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">お問い合わせ内容 <span style="color: #EF4444;">*</span></label>
+                        <textarea class="form-textarea" required placeholder="ご質問やご相談内容をご記入ください"></textarea>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 40px;">
+                        <button type="submit" class="btn btn-primary"
+                            style="min-width: 240px; box-shadow: var(--shadow-glow);">送信する</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="./src/main.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('お問い合わせありがとうございます。担当よりご連絡いたします。');
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>
