@@ -1134,6 +1134,26 @@ body:hover .cursor-light {
         padding-bottom: var(--space-xl);
     }
 
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-text {
+        order: 1;
+    }
+
+    .hero-visual {
+        order: 2;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+        gap: var(--space-sm);
+        margin-top: var(--space-lg);
+        margin-left: 0;
+    }
+
     .hero-title {
         font-size: 1.75rem;
         line-height: 1.4;
@@ -1144,22 +1164,41 @@ body:hover .cursor-light {
     }
 
     .mascot-container {
-        width: 200px;
-        height: 200px;
+        width: 160px;
+        height: 160px;
+        flex-shrink: 0;
+    }
+
+    .hero-mascot {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        gap: var(--space-sm);
     }
 
     .hero-mascot-img {
-        max-width: 280px;
+        max-width: 160px;
     }
 
     .chat-preview {
+        position: static;
         padding: var(--space-sm);
-        max-width: 280px;
+        max-width: 180px;
+        flex-shrink: 0;
     }
 
     .chat-bubble {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
         padding: var(--space-xs) var(--space-sm);
+    }
+
+    .chat-message {
+        gap: var(--space-xs);
+    }
+
+    .chat-avatar-img {
+        width: 20px;
+        height: 20px;
     }
 
     /* Buttons Mobile */
@@ -1232,6 +1271,14 @@ body:hover .cursor-light {
 
     .scout-message-card {
         padding: var(--space-sm);
+    }
+
+    .scout-visual {
+        display: none;
+    }
+
+    .dashboard-mock {
+        display: none;
     }
 
     /* CTA Section Mobile */
