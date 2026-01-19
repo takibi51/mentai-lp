@@ -325,6 +325,15 @@ body:hover .cursor-light {
     opacity: 1;
 }
 
+/* Mobile Menu - Hidden on Desktop */
+.mobile-menu-btn {
+    display: none;
+}
+
+.mobile-nav {
+    display: none;
+}
+
 /* --- Hero Section --- */
 .hero {
     min-height: 100vh;
@@ -1083,14 +1092,98 @@ body:hover .cursor-light {
 }
 
 @media (max-width: 768px) {
+
+    /* Header Mobile */
+    .header {
+        padding: var(--space-sm) 0;
+    }
+
+    .header-inner {
+        justify-content: center;
+    }
+
     .nav {
         display: none;
     }
 
+    .logo-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Typography Mobile */
+    .heading-xl {
+        font-size: 2rem;
+    }
+
+    .heading-lg {
+        font-size: 1.5rem;
+    }
+
+    .heading-md {
+        font-size: 1.25rem;
+    }
+
+    .text-lg {
+        font-size: 1rem;
+    }
+
+    /* Hero Mobile */
+    .hero {
+        padding-top: 120px;
+        padding-bottom: var(--space-xl);
+    }
+
+    .hero-title {
+        font-size: 1.75rem;
+        line-height: 1.4;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .mascot-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero-mascot-img {
+        max-width: 280px;
+    }
+
+    .chat-preview {
+        padding: var(--space-sm);
+        max-width: 280px;
+    }
+
+    .chat-bubble {
+        font-size: 0.85rem;
+        padding: var(--space-xs) var(--space-sm);
+    }
+
+    /* Buttons Mobile */
+    .btn {
+        padding: var(--space-xs) var(--space-md);
+        font-size: 0.9rem;
+    }
+
+    .btn-lg {
+        padding: var(--space-sm) var(--space-lg);
+        font-size: 1rem;
+    }
+
+    /* Sections Mobile */
+    .section {
+        padding: var(--space-xl) 0;
+    }
+
     .steps-grid,
     .reasons-grid,
-    .testimonials-grid {
+    .testimonials-grid,
+    .features-grid {
         grid-template-columns: 1fr;
+        gap: var(--space-md);
     }
 
     .step-connector {
@@ -1106,14 +1199,219 @@ body:hover .cursor-light {
         display: none;
     }
 
+    /* Cards Mobile */
+    .glass-card {
+        padding: var(--space-md);
+    }
+
+    .feature-card,
+    .step-card,
+    .reason-card {
+        padding: var(--space-md);
+    }
+
+    /* Radar Section Mobile */
+    .radar-section {
+        grid-template-columns: 1fr;
+    }
+
+    .radar-chart-container {
+        width: 260px;
+        height: 260px;
+        margin: 0 auto;
+    }
+
+    /* Scout Section Mobile */
+    .scout-preview {
+        padding: var(--space-md);
+    }
+
+    .scout-messages {
+        gap: var(--space-sm);
+    }
+
+    .scout-message-card {
+        padding: var(--space-sm);
+    }
+
+    /* CTA Section Mobile */
+    .cta-title {
+        font-size: 1.5rem;
+    }
+
+    .cta-subtitle {
+        font-size: 0.95rem;
+    }
+
+    /* Footer Mobile */
+    .footer {
+        padding: var(--space-lg) 0;
+    }
+
     .footer-content {
         flex-direction: column;
         text-align: center;
+        gap: var(--space-md);
     }
 
     .footer-links {
         flex-wrap: wrap;
         justify-content: center;
+        gap: var(--space-sm);
+    }
+
+    .footer-link {
+        font-size: 0.85rem;
+    }
+
+    .footer-copyright {
+        font-size: 0.75rem;
+    }
+
+    /* Contact Page Mobile */
+    .contact-hero {
+        padding-top: 120px;
+    }
+
+    .contact-form {
+        padding: var(--space-md);
+    }
+
+    .form-input {
+        padding: var(--space-sm);
+        font-size: 16px;
+        /* Prevents zoom on iOS */
+    }
+
+    /* About Page Mobile */
+    .about-hero {
+        padding-top: 120px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-card {
+        padding: var(--space-md);
+    }
+
+    .team-bio {
+        font-size: 0.9rem;
+    }
+
+    .mission-vision {
+        grid-template-columns: 1fr;
+    }
+
+    .mv-card {
+        padding: var(--space-md);
+    }
+
+    .company-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-item {
+        grid-column: span 1 !important;
+    }
+
+    /* Thanks Page Mobile */
+    .thanks-section {
+        padding-top: 120px;
+    }
+
+    .thanks-mascot-img {
+        width: 200px;
+    }
+
+    .thanks-message {
+        padding: var(--space-md);
+    }
+
+    .thanks-message p {
+        font-size: 0.95rem;
+    }
+
+    /* Dashboard Features Mobile */
+    .dashboard-features {
+        grid-template-columns: 1fr;
+    }
+
+    /* Mobile Menu Button */
+    .mobile-menu-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        position: absolute;
+        right: var(--space-md);
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1001;
+    }
+
+    .hamburger-line {
+        width: 24px;
+        height: 2px;
+        background: var(--off-white);
+        border-radius: 2px;
+        transition: all var(--duration-normal) ease;
+    }
+
+    .mobile-menu-btn.active .hamburger-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .mobile-menu-btn.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-btn.active .hamburger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Mobile Navigation */
+    .mobile-nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-md);
+        padding: var(--space-lg);
+        background: rgba(15, 23, 42, 0.98);
+        backdrop-filter: blur(20px);
+        border-top: 1px solid var(--glass-border);
+    }
+
+    .mobile-nav.active {
+        display: flex;
+    }
+
+    .mobile-nav-link {
+        font-size: 1.1rem;
+        font-weight: var(--font-weight-medium);
+        padding: var(--space-sm) 0;
+        color: var(--off-white);
+        opacity: 0.9;
+        transition: opacity var(--duration-fast);
+    }
+
+    .mobile-nav-link:hover {
+        opacity: 1;
+    }
+
+    .btn-mobile-cta {
+        width: 100%;
+        max-width: 280px;
+        margin-top: var(--space-sm);
+        text-align: center;
     }
 }
 

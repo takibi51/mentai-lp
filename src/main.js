@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initFlowSteps();
     initMascotAnimation();
     initSmoothScroll();
+    initMobileMenu();
 });
 
 /**
@@ -152,6 +153,38 @@ function initSmoothScroll() {
                 });
             }
         });
+    });
+}
+
+/**
+ * Mobile Menu Toggle
+ * Hamburger menu functionality for mobile devices
+ */
+function initMobileMenu() {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+
+    if (!mobileMenuBtn || !mobileNav) return;
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.classList.toggle('active');
+        mobileNav.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenuBtn.classList.remove('active');
+            mobileNav.classList.remove('active');
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!mobileMenuBtn.contains(e.target) && !mobileNav.contains(e.target)) {
+            mobileMenuBtn.classList.remove('active');
+            mobileNav.classList.remove('active');
+        }
     });
 }
 
